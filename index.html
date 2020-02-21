@@ -3,57 +3,41 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Antonio Pierro - Processign Project</title>
+        <title Marilena Tuveri - Processign Project</title>
         <script src="vendors/processing.min.js"></script>
     </head>
     <body>
         <h1>Processing project by Marilena Tuveri</h1>
         <script type="text/processing">
 
-            // Write your project here
-            
-             void setup() {
+void setup() {
 
-              size(600,600);
+              size(600, 600);
               
-              background(325);
-              
-        }
-
-            void draw() {
-if (frameCount % 100 ==5) {
-  fill(frameCount *3 %100, frameCount * 5 %100, frameCount *7 %255);
+              background(150, 150, 500);
+       
 }
-
-                pushMatrix();
-
-                translate(300, 300);
-                 
-                stroke(50,600,250);
+  
+            void draw(){
+              if (frameCount % 10 ==0 ){
+                fill (frameCount * 3 % 255, frameCount * 5 % 255, frameCount *7 % 255);
+              }
               
-                rotate(radians(frameCount * 2  % 360));
-                
-                scale(2.5);
-                
-                fill (10,100,80);
-                
-                rect (50+10, 0+0,5, 80, 5) ;
-                rect (25+10, 1+1,40, 2.5); 
-
-                popMatrix();
-
-            
-  pushMatrix();
-  translate(50,50); 
-  ellipse(250,250, 50, 50); 
-  fill(200,100,400); 
-           rotate( radians (frameCount* 0.5 %360));
            
-           popMatrix();
-
-}
+            pushMatrix(); 
+            translate( 300, 300); 
+            rotate (radians (frameCount * 10 %360)); 
+            ellipse(25,25, 25, 25);
+            rotate(radians (frameCount *5 % 360)); 
+            rect( 5, 5, 5, 5); 
+            rotate( radians (frameCount *7 % 360)); 
+            ellipse (100,50, 100, 50); 
+            scale (50, 100); 
+            popMatrix();
             
-           
+            
+            }         
+
             
         </script>
         <canvas></canvas>
